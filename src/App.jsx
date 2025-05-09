@@ -20,10 +20,11 @@ import StopwatchWithMs from "./components/StopWatch1/Watch";
 import Progress from "./components/Progress/Progress";
 import FileExprorer from "./components/FileExprorer/FileExprorer";
 import DigitalWatch from "./components/DigitalWatch/DigitalWatch";
+import AnalogClock from "./components/AnalogClock/AnalogClock";
 
 const App = () => {
   const [challanges, setChallanges] = useState(["ChessBoard", "Circles","ColumnTable","StopWatch",'GridLight',"NestedCheckBox",'NestedComment','OtpInput',"InfiniteScroll"
-    ,'TicTacToy','TrafficLight','TransferList','TypeHead','WaterBalancer','StopwatchWithMs','Progress','FileExprorer','DigitalWatch'
+    ,'TicTacToy','TrafficLight','TransferList','TypeHead','WaterBalancer','StopwatchWithMs','Progress','FileExprorer','DigitalWatch','AnalogClock'
   ]);
  
   return (
@@ -52,6 +53,7 @@ const App = () => {
           <Route path="/Progress" element={<Progress />} />
           <Route path="/FileExprorer" element={<FileExprorer />} />
           <Route path="/DigitalWatch" element={<DigitalWatch />} />
+          <Route path="/AnalogClock" element={<AnalogClock/>} />
         </Routes>
       </div>
     </div>
