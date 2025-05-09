@@ -6,8 +6,10 @@ import { BrowserRouter } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    {/* <ErrorBoundary fallback={<p>Something went wrong</p>}> */}
     <BrowserRouter>
     <App />
     </BrowserRouter>
+    {/* </ErrorBoundary> */}
   </StrictMode>,
 )
