@@ -21,11 +21,32 @@ import Progress from "./components/Progress/Progress";
 import FileExprorer from "./components/FileExprorer/FileExprorer";
 import DigitalWatch from "./components/DigitalWatch/DigitalWatch";
 import AnalogClock from "./components/AnalogClock/AnalogClock";
+import ChipsInput from "./components/ChipsInput/ChipsInput";
 
 const App = () => {
-  const [challanges, setChallanges] = useState(["ChessBoard", "Circles","ColumnTable","StopWatch",'GridLight',"NestedCheckBox",'NestedComment','OtpInput',"InfiniteScroll"
-    ,'TicTacToy','TrafficLight','TransferList','TypeHead','WaterBalancer','StopwatchWithMs','Progress','FileExprorer','DigitalWatch','AnalogClock'
-  ]);
+  const [challanges, setChallanges] = useState([
+    { title: "ChessBoard", category: "medium" },
+    { title: "Circles", category: "medium" },
+    { title: "ColumnTable", category: "medium" },
+    { title: "StopWatch", category: "medium" },
+    { title: "GridLight", category: "medium" },
+    { title: "NestedCheckBox", category: "hard" },
+    { title: "NestedComment", category: "hard" },
+    { title: "OtpInput", category: "hard" },
+    { title: "InfiniteScroll", category: "hard" },
+    { title: "TicTacToy", category: "hard" },
+    { title: "TrafficLight", category: "medium" },
+    { title: "TransferList", category: "medium" },
+    { title: "TypeHead", category: "hard" },
+    { title: "WaterBalancer", category: "hard" },
+    { title: "StopwatchWithMs", category: "medium" },
+    { title: "Progress", category: "easy" },
+    { title: "FileExprorer", category: "hard" },
+    { title: "DigitalWatch", category: "medium" },
+    { title: "AnalogClock", category: "medium" },
+    { title: "ChipsInput", category: "medium" }
+  ]
+  );
  
   return (
     <div className="min-h-screen min-w-screen">
@@ -54,6 +75,7 @@ const App = () => {
           <Route path="/FileExprorer" element={<FileExprorer />} />
           <Route path="/DigitalWatch" element={<DigitalWatch />} />
           <Route path="/AnalogClock" element={<AnalogClock/>} />
+          <Route path="/ChipsInput" element={<ChipsInput/>} />
         </Routes>
       </div>
     </div>
