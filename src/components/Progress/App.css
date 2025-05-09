@@ -1,0 +1,32 @@
+.container{
+  width: 80%;
+  margin: 100px auto 0px auto;
+
+}
+.progressContainer{
+  height: 20px;
+  background: gray;
+  border-radius: 20px;
+  padding:0px 0px;
+  overflow: hidden;
+
+}
+.progress{
+  width: 10px;
+  background: green;
+  border-radius: 20px;
+ 
+  height: 100%;
+ 
+  transition: width .5s linear;
+}
+
+.buttons{
+  display: flex;
+  width: max-content;
+  margin: 20px auto 0px auto;
+  gap: 10px;
+  *{
+    padding: 4px 10px ;
+  }
+}
