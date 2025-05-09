@@ -19,10 +19,11 @@ import WaterBalancer from "./components/WaterBalancer/WaterBalancer";
 import StopwatchWithMs from "./components/StopWatch1/Watch";
 import Progress from "./components/Progress/Progress";
 import FileExprorer from "./components/FileExprorer/FileExprorer";
+import DigitalWatch from "./components/DigitalWatch/DigitalWatch";
 
 const App = () => {
   const [challanges, setChallanges] = useState(["ChessBoard", "Circles","ColumnTable","StopWatch",'GridLight',"NestedCheckBox",'NestedComment','OtpInput',"InfiniteScroll"
-    ,'TicTacToy','TrafficLight','TransferList','TypeHead','WaterBalancer','StopwatchWithMs','Progress','FileExprorer'
+    ,'TicTacToy','TrafficLight','TransferList','TypeHead','WaterBalancer','StopwatchWithMs','Progress','FileExprorer','DigitalWatch'
   ]);
  
   return (
@@ -50,6 +51,7 @@ const App = () => {
           <Route path="/StopwatchWithMs" element={<StopwatchWithMs />} />
           <Route path="/Progress" element={<Progress />} />
           <Route path="/FileExprorer" element={<FileExprorer />} />
+          <Route path="/DigitalWatch" element={<DigitalWatch />} />
         </Routes>
       </div>
     </div>
