@@ -22,6 +22,7 @@ import FileExprorer from "./components/FileExprorer/FileExprorer";
 import DigitalWatch from "./components/DigitalWatch/DigitalWatch";
 import AnalogClock from "./components/AnalogClock/AnalogClock";
 import ChipsInput from "./components/ChipsInput/ChipsInput";
+// import BouncingBall from "./components/BouncingBall/BouncingBall";
 
 const App = () => {
   const [challanges, setChallanges] = useState([
@@ -44,7 +45,8 @@ const App = () => {
     { title: "FileExprorer", category: "hard" },
     { title: "DigitalWatch", category: "medium" },
     { title: "AnalogClock", category: "medium" },
-    { title: "ChipsInput", category: "medium" }
+    { title: "ChipsInput", category: "medium" },
+    // { title: "BouncingBall", category: "medium" },
   ]
   );
  
@@ -76,6 +78,7 @@ const App = () => {
           <Route path="/DigitalWatch" element={<DigitalWatch />} />
           <Route path="/AnalogClock" element={<AnalogClock/>} />
           <Route path="/ChipsInput" element={<ChipsInput/>} />
+          {/* <Route path="/BouncingBall" element={<BouncingBall/>} /> */}
         </Routes>
       </div>
     </div>

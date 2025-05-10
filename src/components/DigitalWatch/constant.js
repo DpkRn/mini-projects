@@ -1,36 +1,16 @@
-export const convertToDigitArray=(number=null)=>{
-    if(number==null) return   
-         [false,false,false,false,false,false,false]
-
-    if(number=='0'){
-        return [true,true,true,false,true,true,true]
-    }
-    if(number=='1'){
-        return [false,false,false,false,false,true,true]
-    }
-    if(number=='2'){
-        return [false,true,true,true,true,true,false]
-    }
-    if(number=='3'){
-        return [false,false,true,true,true,true,true]
-    }
-    if(number=='4'){
-        return [true,false,false,true,false,true,true]
-    }
-    if(number=='5'){
-        return [true,false,true,true,true,false,true]
-    }
-    if(number=='6'){
-        return [true,true,true,true,true,false,true]
-    }
-    if(number=='7'){
-        return [false,false,true,false,false,true,true]
-    }
-    if(number=='8'){
-        return [true,true,true,true,true,true,true]
-    }
-    if(number=='9'){
-        return [true,false,true,true,true,true,true]
-    }
-    
-}
+const map = {
+    '0': [true,true,true,false,true,true,true],
+    '1': [false,false,false,false,false,true,true],
+    '2': [false,true,true,true,true,true,false],
+    '3': [false,false,true,true,true,true,true],
+    '4': [true,false,false,true,false,true,true],
+    '5': [true,false,true,true,true,false,true],
+    '6': [true,true,true,true,true,false,true],
+    '7': [false,false,true,false,false,true,true],
+    '8': [true,true,true,true,true,true,true],
+    '9': [true,false,true,true,true,true,true],
+  };
+  
+  export const convertToDigitArray = (number = null) => {
+    return map[String(number)] || [false, false, false, false, false, false, false];
+  };

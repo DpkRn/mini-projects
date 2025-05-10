@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { convertToDigitArray } from './constant'
 
 const Digit = ({number=null}) => {
+  console.log(number)
     const [digit,setDigit]=useState([true,false,false,true,false,false,false])
-    console.log(digit)
     useEffect(()=>{
        setDigit(convertToDigitArray(number)) 
     },[number])
