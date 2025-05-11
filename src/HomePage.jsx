@@ -56,13 +56,13 @@ const HomePage = ({challanges}) => {
         {filteredComponent.map((component, ind) => (
           <div
           key={ind}
-            className="w-[250px] h-[150px] border bg-white/80 rounded-xl shadow-md shadow-gray-400 flex flex-col justify-start items-start hover:border-white font-bold pl-16 pt-12 hover:scale-[1.1] duration-500"
+            className="w-[250px] h-[150px] relative border bg-white/80 rounded-xl shadow-md shadow-gray-400 flex flex-col justify-start items-start hover:border-white font-bold pl-16 pt-12 hover:scale-[1.1] duration-500"
             onClick={() => navigate(`/${component.title}`)}
           >
             <h1>{component.title}</h1>
-            <div className='flex items-center gap-1'> 
+            <div className='flex items-center gap-1 absolute bottom-4 right-4'> 
               <div className={`${component.category==='hard'?"bg-red-500":"bg-green-500"} w-4 h-4 rounded-full`}></div>
-              <h2>{component.category}</h2>
+              <h2 className=''>{component.category}</h2>
             </div>
           </div>
         ))}
