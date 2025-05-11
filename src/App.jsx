@@ -56,7 +56,7 @@ const App = () => {
     <div className="min-h-screen min-w-screen">
       <Navbar />
      
-
+      
       <div>
         <Routes>
           <Route path='/' element={<HomePage challanges={challanges}/>}/>
