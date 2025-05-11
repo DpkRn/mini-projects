@@ -23,6 +23,7 @@ import DigitalWatch from "./components/DigitalWatch/DigitalWatch";
 import AnalogClock from "./components/AnalogClock/AnalogClock";
 import ChipsInput from "./components/ChipsInput/ChipsInput";
 import TicketBooking from "./components/TicketBookingSystem/TicketBooking";
+import background from './assets/b4.jpeg'
 // import BouncingBall from "./components/BouncingBall/BouncingBall";
 
 const App = () => {
@@ -51,13 +52,15 @@ const App = () => {
     // { title: "BouncingBall", category: "medium" },
   ]
   );
+
+  const style={ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center' }
  
   return (
-    <div className="min-h-screen min-w-screen">
+    <div className="min-h-screen min-w-screen  "  style={style}>
       <Navbar />
      
-      
-      <div>
+
+      <div className="pt-5">
         <Routes>
           <Route path='/' element={<HomePage challanges={challanges}/>}/>
           <Route path="/ChessBoard" element={<Chess />} />

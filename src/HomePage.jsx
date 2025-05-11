@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 
+
+
 const HomePage = ({challanges}) => {
   const [filterText,setFilterText]=useState('all')
   const [searchText,setSearchText]=useState('')
@@ -10,7 +12,7 @@ const HomePage = ({challanges}) => {
   const navigate = useNavigate();
 
 
-
+  
 
 
   const handleFilter=(e)=>{
@@ -54,7 +56,7 @@ const HomePage = ({challanges}) => {
         {filteredComponent.map((component, ind) => (
           <div
           key={ind}
-            className="w-[250px] h-[150px] border rounded-xl shadow-md shadow-gray-400 flex flex-col justify-start items-start hover:border-white font-bold pl-16 pt-12"
+            className="w-[250px] h-[150px] border bg-white/80 rounded-xl shadow-md shadow-gray-400 flex flex-col justify-start items-start hover:border-white font-bold pl-16 pt-12 hover:scale-[1.1] duration-500"
             onClick={() => navigate(`/${component.title}`)}
           >
             <h1>{component.title}</h1>
