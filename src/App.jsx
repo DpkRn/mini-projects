@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, {  useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Chess from "./components/ChessBoard/Chess";
 import { Route, Routes } from "react-router-dom";
@@ -23,10 +23,18 @@ import DigitalWatch from "./components/DigitalWatch/DigitalWatch";
 import AnalogClock from "./components/AnalogClock/AnalogClock";
 import ChipsInput from "./components/ChipsInput/ChipsInput";
 import TicketBooking from "./components/TicketBookingSystem/TicketBooking";
-import background from './assets/b4.jpeg'
+
+import wall from './assets/b1.jpg'
+import water from './assets/b2.jpg'
+import solid from './assets/b3.jpeg'
+import pencil from './assets/b4.jpeg'
+import Pegination from "./components/Pegination/Pegination";
+import Rough from "./components/Rough/Rough";
+import DragDrop from "./components/DragDrop/DragDrop";
 // import BouncingBall from "./components/BouncingBall/BouncingBall";
 
 const App = () => {
+  
   const [challanges, setChallanges] = useState([
     { title: "ChessBoard", category: "medium" },
     { title: "Circles", category: "medium" },
@@ -49,11 +57,18 @@ const App = () => {
     { title: "AnalogClock", category: "medium" },
     { title: "ChipsInput", category: "medium" },
     { title: "TicketBooking", category: "medium" },
+    { title: "Pegination", category: "medium" },
+    { title: "Rough", category: "only for rough" },
+    { title: "DragDrop", category: "medium" },
     // { title: "BouncingBall", category: "medium" },
   ]
   );
+  const [backgroundInd,setBackGroundInd]=useState(0)
+   const backGround=[pencil,water,solid,wall];
+  
+  const style={ backgroundImage: `url(${backGround[backgroundInd]})`, backgroundSize: 'cover', backgroundPosition: 'center' }
 
-  const style={ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center' }
+  
  
   return (
     <div className="min-h-screen min-w-screen  "  style={style}>
@@ -62,7 +77,7 @@ const App = () => {
 
       <div className="pt-5">
         <Routes>
-          <Route path='/' element={<HomePage challanges={challanges}/>}/>
+          <Route path='/' element={<HomePage challanges={challanges} setBackGroundInd={setBackGroundInd} backgroundInd={backgroundInd}/>}/>
           <Route path="/ChessBoard" element={<Chess />} />
           <Route path="/Circles" element={<Circle />} />
           <Route path="/ColumnTable" element={<ColumnTable />} />
@@ -84,6 +99,9 @@ const App = () => {
           <Route path="/AnalogClock" element={<AnalogClock/>} />
           <Route path="/ChipsInput" element={<ChipsInput/>} />
           <Route path="/TicketBooking" element={<TicketBooking/>} />
+          <Route path="/Pegination" element={<Pegination/>} />
+          <Route path="/Rough" element={<Rough/>} />
+          <Route path="/DragDrop" element={<DragDrop/>} />
           {/* <Route path="/BouncingBall" element={<BouncingBall/>} /> */}
         </Routes>
       </div>

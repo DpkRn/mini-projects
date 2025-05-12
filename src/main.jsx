@@ -4,12 +4,16 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 
+import ErrorPage from './components/ErrorPage.jsx'
+import { ErrorBoundary } from 'react-error-boundary'
+
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <ErrorBoundary fallback={<p>Something went wrong</p>}> */}
+    <ErrorBoundary fallback={<ErrorPage/>}>
     <BrowserRouter>
     <App />
     </BrowserRouter>
-    {/* </ErrorBoundary> */}
+    </ErrorBoundary>
   </StrictMode>,
 )

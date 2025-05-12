@@ -4,10 +4,15 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-const HomePage = ({challanges}) => {
+const HomePage = ({challanges,setBackGroundInd,backgroundInd}) => {
   const [filterText,setFilterText]=useState('all')
   const [searchText,setSearchText]=useState('')
   const [filteredComponent,setFilteredComponent]=useState(challanges)
+  const backgroundTitle=['pencil','water','solid','wall'];
+  
+ 
+
+  
   
   const navigate = useNavigate();
 
@@ -37,7 +42,7 @@ const HomePage = ({challanges}) => {
 
 
   return (
-   <div className='flex items-center flex-col w-screen p-5 gap-10'>
+   <div className='flex items-center flex-col w-screen p-5 gap-10 font-bold'>
     <div className='w-full flex justify-around'>
      <div className='search flex gap-2 items-center'>
       <label htmlFor="search">Search By Name</label>
@@ -51,12 +56,23 @@ const HomePage = ({challanges}) => {
         <option value="hard">Hard</option>
       </select>
      </div>
+
+     <div className='background'>
+      <span>Change Background:</span>
+      <select value={backgroundInd} onChange={(e)=>setBackGroundInd(e.target.value)} className='p-1 border rounded ml-1'>
+          {backgroundTitle.map((title,ind)=>
+          <option key={ind} value={ind}>
+            {title}
+          </option>
+          )}
+      </select>
+     </div>
     </div>
      <div className=" flex flex-wrap gap-5  w-[90%]" >
         {filteredComponent.map((component, ind) => (
           <div
           key={ind}
-            className="w-[250px] h-[150px] relative border bg-white/80 rounded-xl shadow-md shadow-gray-400 flex flex-col justify-start items-start hover:border-white font-bold pl-16 pt-12 hover:scale-[1.1] duration-500"
+            className="w-[250px] h-[150px] relative border bg-white/40 rounded-xl shadow-md shadow-gray-400 flex flex-col justify-start items-start hover:border-white font-bold pl-16 pt-12 hover:scale-[1.1] duration-500"
             onClick={() => navigate(`/${component.title}`)}
           >
             <h1>{component.title}</h1>
