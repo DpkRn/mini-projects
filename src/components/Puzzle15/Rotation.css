@@ -1,0 +1,30 @@
+@keyframes shiftLeft {
+  from { transform: translateX(0px) rotateZ(0deg); }
+  to   { transform: translateX(-104px) rotateZ(360deg); }
+}
+
+@keyframes shiftRight {
+  from { transform: translateX(0px) rotateZ(0deg); }
+  to   { transform: translateX(104px) rotateZ(360deg); }
+}
+
+@keyframes shiftUp {
+  from { transform: translateY(0px) rotateZ(0deg); }
+  to   { transform: translateY(-104px) rotateZ(360deg); }
+}
+
+@keyframes shiftDown {
+  from { transform: translateY(0px) rotateZ(0deg); }
+  to   { transform: translateY(104px) rotateZ(360deg); }
+}
+
+.shiftLeft, .shiftRight, .shiftUp, .shiftDown {
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.shiftLeft { animation-name: shiftLeft; }
+.shiftRight { animation-name: shiftRight; }
+.shiftUp { animation-name: shiftUp; }
+.shiftDown { animation-name: shiftDown; }

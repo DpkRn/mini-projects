@@ -30,7 +30,9 @@ import solid from './assets/b3.jpeg'
 import pencil from './assets/b4.jpeg'
 import Pegination from "./components/Pegination/Pegination";
 import Rough from "./components/Rough/Rough";
-import DragDrop from "./components/DragDrop/DragDrop";
+import DragDropList from "./components/DragDropList/DragDropList";
+import Puzzle15 from "./components/Puzzle15/Puzzle15";
+import DragDropPuzzle from "./components/DragDropPuzzle/DragDropPuzzle";
 // import BouncingBall from "./components/BouncingBall/BouncingBall";
 
 const App = () => {
@@ -59,7 +61,9 @@ const App = () => {
     { title: "TicketBooking", category: "medium" },
     { title: "Pegination", category: "medium" },
     { title: "Rough", category: "only for rough" },
-    { title: "DragDrop", category: "medium" },
+    { title: "DragDropList", category: "medium" },
+    { title: "Puzzle15", category: "hard" },
+    { title: "DragDropPuzzle", category: "hard" },
     // { title: "BouncingBall", category: "medium" },
   ]
   );
@@ -101,7 +105,9 @@ const App = () => {
           <Route path="/TicketBooking" element={<TicketBooking/>} />
           <Route path="/Pegination" element={<Pegination/>} />
           <Route path="/Rough" element={<Rough/>} />
-          <Route path="/DragDrop" element={<DragDrop/>} />
+          <Route path="/DragDropList" element={<DragDropList/>} />
+          <Route path="/Puzzle15" element={<Puzzle15/>} />
+          <Route path="/DragDropPuzzle" element={<DragDropPuzzle/>} />
           {/* <Route path="/BouncingBall" element={<BouncingBall/>} /> */}
         </Routes>
       </div>

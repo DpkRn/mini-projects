@@ -60,13 +60,13 @@ const TransferList = () => {
 
     
   return (
-    <div className='h-full w-full border-2 border-solid flex px-4' >
+    <div className='h-full w-[30%] shadow-md shadow-amber-600 flex px-4 justify-center mx-auto mt-20 p-10 rounded-2xl bg-white font-bold' >
         <Container items={list1} onClick={setList1}/>
         <div className="buttons flex flex-col gap-6 items-center  justify-center w-full">
-            <button  className={`${disabled.b1?"disabled":"enabled"}`} onClick={handleRightAll}>{'>>'}</button>
-            <button   className={`${disabled.b2?"disabled":"enabled"}`} onClick={handleRight}>{'>'}</button>
-            <button  className={`${disabled.b3?"disabled":"enabled"}`} onClick={handleLeft}>{"<"}</button>
-            <button  className={`${disabled.b4?"disabled":"enabled"}`} onClick={handleLeftAll}>{"<<"}</button>
+            <button  disabled={disabled.b1==true} className={`p-4 rounded-full ${disabled.b1==true?"bg-gray-500":"bg-amber-200"}`} onClick={handleRightAll}>{'>>'}</button>
+            <button   disabled={disabled.b2==true} className={`p-4 rounded-full ${disabled.b2==true?"bg-gray-500":"bg-amber-200"}`} onClick={handleRight}>{'>'}</button>
+            <button  disabled={disabled.b3==true} className={`p-4 rounded-full ${disabled.b3==true?"bg-gray-500":"bg-amber-200"}`} onClick={handleLeft}>{"<"}</button>
+            <button  disabled={disabled.b4==true} className={`p-4 rounded-full ${disabled.b4==true?"bg-gray-500":"bg-amber-200"}`} onClick={handleLeftAll}>{"<<"}</button>
         </div>
         <Container items={list2} onClick={setList2}/>
     </div>
